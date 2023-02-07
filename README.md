@@ -1,6 +1,15 @@
 # Ascenda Travel Platform
 The program helps to search for the best offers near the hotel where the customer is staying with the known latitude and longitude within a predetermined radius
 
+- [How to use](#how-to-use)
+- [Run program](#run-program)
+- [The flow of the program](#the-flow-of-the-program)
+- [Algorithm](#algorithm)
+- [Improvement direction](#improvement-direction)
+- [Extensible code](#extensible-code)
+- [Unit test](#unit-test)
+
+
 ## How to use
 Install the Dart SDK: [Get the Dart SDK | Dart](https://dart.dev/get-dart)
 With VSCode, in the settings search for "Dart: Cli Console" and switch to "terminal" to be able to use the console screen.
@@ -28,7 +37,7 @@ The program will require you to enter the check-in date at the hotel. And then i
 8. Go through the hash-map once to get the closest offers for that category
 9. So now we have a list of offers with different attributes and closest ones. We just need to reorder this list and take the first two elements to finish → end the algorithm
 
-Complexity: O(3n+nlogn) (3n for 3 loops and nlogn in the case of list offers only have one type of category)
+Complexity: O(3n+nlogn) (3n for 3 loops and nlogn in the case of list offers only have one type of category)\
 Space complexity: O(n)
 
 ## Improvement direction
@@ -38,7 +47,7 @@ Space complexity: O(n)
     * If not, return the highest value and the second highest value
 * The algorithm only uses deletion operations from the list, so using a linked list will be the most optimal
 
-Complexity: O(2n)
+Complexity: O(2n)\
 Space complexity: O(n)
 
 ## Extensible code
