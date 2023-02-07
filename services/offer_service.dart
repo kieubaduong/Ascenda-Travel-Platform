@@ -18,12 +18,17 @@ class OfferService {
     try {
       Response res =
           await Dio().get("${baseApiUrl}/near_by?lat=$lat&lon=$lon&rad=$rad");
-      if (res.statusCode == 200) {
-        return res.data["offers"]
-            .map<Offer>((e) => Offer.fromMap(e as Map<String, dynamic>))
-            .toList();
+      return res.data["offers"]
+          .map<Offer>((e) => Offer.fromMap(e as Map<String, dynamic>))
+          .toList();
+    } on DioError catch (e) {
+      if (e.response != null) {
+        print(e.response?.data);
+        print(e.response?.headers);
+        print(e.response?.requestOptions);
       } else {
-        log("server error: ${res.statusMessage}");
+        print(e.requestOptions);
+        print(e.message);
       }
     } catch (e) {
       log("get offers error: $e");
