@@ -11,7 +11,7 @@ The program helps to search for the best offers near the hotel where the custome
 
 
 ## How to use
-Install the Dart SDK: [Get the Dart SDK | Dart](https://dart.dev/get-dart)
+Install the Dart SDK: [Get the Dart SDK | Dart](https://dart.dev/get-dart)\
 With VSCode, in the settings search for "Dart: Cli Console" and switch to "terminal" to be able to use the console screen.
 
 ## Run program
