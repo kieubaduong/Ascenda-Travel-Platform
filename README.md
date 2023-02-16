@@ -1,13 +1,14 @@
 # Ascenda Travel Platform
 The program helps to search for the best offers near the hotel where the customer is staying with the known latitude and longitude within a predetermined radius
 
-- [How to use](#how-to-use)
-- [Run program](#run-program)
-- [The flow of the program](#the-flow-of-the-program)
-- [Algorithm](#algorithm)
-- [Improvement direction](#improvement-direction)
-- [Extensible code](#extensible-code)
-- [Unit test](#unit-test)
+- [Ascenda Travel Platform](#ascenda-travel-platform)
+  - [How to use](#how-to-use)
+  - [Run program](#run-program)
+  - [The flow of the program](#the-flow-of-the-program)
+  - [Algorithm](#algorithm)
+  - [Improvement direction](#improvement-direction)
+  - [Extensible code](#extensible-code)
+  - [Unit test](#unit-test)
 
 
 ## How to use
@@ -30,12 +31,14 @@ The program will require you to enter the check-in date at the hotel. And then i
    * For the same category offers, take the closest one
    * For different category offers, take the two closest ones
 5. So there are two cases:
+   
     a. The case where there are more than one category in the list of offers
+    
     b. The case where there is only one category in the list of offers
 6. For the case of only one category, sort the list according to the distance and take the two closest ones → end the algorithm
 7. For the case of multiple categories, create a hash-map with the categoryId as the key and the list of offers of that category as the value
 8. Go through the hash-map once to get the closest offers for that category
-9. So now we have a list of offers with different attributes and closest ones. We just need to reorder this list and take the first two elements to finish → end the algorithm
+9.  So now we have a list of offers with different attributes and closest ones. We just need to reorder this list and take the first two elements to finish → end the algorithm
 
 Complexity: O(3n+nlogn) (3n for 3 loops and nlogn in the case of list offers only have one type of category)\
 Space complexity: O(n)
